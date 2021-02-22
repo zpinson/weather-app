@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Title</title>
+  </head>
+  <body class=>
+    <div
+      class="row"
+    > <h1 class=" col-12 text-primary">Weather Dashboard</h1>
+      <div class="col-12 col-md-3 bg-light p-3">
+       
+        <form id="search-form" class="mb-2">
+          <h2>Search for a city</h2>
+          <input
+            id="search-input"
+            class="form-input w-100"
+            type="text"
+            placeholder="Search!"
+          />
+
+          <button class="btn btn-info btn-block">Search</button>
+        </form>
+        <div class="row" id="city-list">
+
+        </div>
+      </div>
+
+      <div class="col-12 col-md-9 p-3 text-dark">
+        <h2 id="date"><span id="result-text"></span></h2>
+        <div id="result-content">
+        </div> 
+        
+        <div class="container px-4">
+          <div class="row gx-5">
+            <div class="col">
+             <div id="forcast-1" class="p-3 border text-dark bg-light"></div>
+            </div>
+            <div class="col">
+              <div id="forcast-2" class="p-3 border text-dark bg-light"></div>
+            </div>
+            <div class="col">
+              <div id="forcast-3" class="p-3 border text-dark bg-light"></div>
+            </div>
+            <div class="col">
+              <div id="forcast-4" class="p-3 border text-dark bg-light"></div>
+            </div>
+            <div class="col">
+              <div id="forcast-5" class="p-3 border text-dark bg-light"></div>
+            </div>
+          </div>
+        </div>
+        <!-- <div id="forcast" class="row p-3 text-black">
+        <div id="forcast-1" class="col bg-info text-black">forcast-1</div>
+        <div id="forcast-2" class="col bg-info text-black">forcast-1</div>
+        <div id="forcast-3" class="col bg-info text-black">forcast-1</div>
+        <div id="forcast-4" class="col bg-info text-black">forcast-1</div>
+        <div id="forcast-5" class="col bg-info text-black">forcast-1</div> -->
+       
+
+      </div>
+      </div>
+     
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
