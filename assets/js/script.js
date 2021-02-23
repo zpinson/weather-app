@@ -268,7 +268,7 @@ function searchApi(query) {
 }
 
 function uvIndex(lat, lon) {
-  var uvQueryUrl = "http://api.openweathermap.org/data/2.5/uvi?lat=";
+  var uvQueryUrl = "https://api.openweathermap.org/data/2.5/uvi?lat=";
 
   console.log(lat);
   console.log(lon);
