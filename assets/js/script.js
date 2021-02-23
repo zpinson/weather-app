@@ -10,27 +10,20 @@ var day4El = document.getElementById("forcast-4");
 var day5El = document.getElementById("forcast-5");
 var lat = [];
 var lon = [];
+var storage = ''
 var resultCard = document.createElement("div");
   resultCard.classList.add("card", "bg-light", "text-dark", "mb-3", "p-3");
     var resultBody = document.createElement("div");
   resultBody.classList.add("card-body");
   
-// function getParams() {
-//   // Get the search params out of the URL (i.e. `?q=london&format=photo`) and convert it to an array (i.e. ['?q=london', 'format=photo'])
 
-//   // Get the query and format values
-
-//   //   var format = searchParamsArr[1].split('=').pop();
-//   console.log(query);
-//   searchApi(query);
-// }
 
 function printResults(resultObj) {
   console.log(resultObj);
-// resultContentEl.innerHTML = ""
+
 resultBody.innerHTML = ''
 resultCard.innerHTML = ''
-  // set up `<div>` to hold result content
+  
   
 
 resultCard.append(resultBody);
@@ -67,11 +60,7 @@ resultCard.append(resultBody);
       "<strong>Description:</strong>  No description for this entry.";
   }
 
-  // var linkButtonEl = document.createElement('a');
-  // linkButtonEl.textContent = 'Read More';
-  // linkButtonEl.setAttribute('href', resultObj.url);
-  // linkButtonEl.classList.add('btn', 'btn-dark');
-
+  
   resultBody.append(titleEl, iconEl, bodyContentEl);
 
   resultContentEl.append(resultCard);
@@ -306,6 +295,16 @@ function uvIndex(lat, lon) {
       document.getElementById('date').innerHTML = '<h2>Weather bultin for: ' + uvRes.date_iso.slice(0, 10) + '</h2>'
       var uvEl = document.createElement('p')
       uvEl.innerHTML =   "<strong>UV index:</strong> " + uvRes.value;
+      
+      if(uvRes.value <= 3){
+      uvEl.classList.add('bg-success')
+      }else if (uvRes.value <= 7){
+        uvEl.classList.add('bg-warning')
+      }else{
+        uvEl.classList.add('bg-danger')
+      }
+
+      uvEl.classList.add('col-2')
       resultBody.append(uvEl)
       document
     })
@@ -322,13 +321,77 @@ function handleSearchFormSubmit(event) {
   console.log(query);
   var cityButton = document.createElement('button')
   cityButton.innerHTML = query
-  cityButton.classList.add('col-12')
+  cityButton.classList.add('col-8')
   cityList.append(cityButton)
+  cityButton.addEventListener('click', function(){
+    searchApi(cityButton.innerHTML)
+  })
+  var city = localStorage.getItem('city')
+  console.log(city)
 
+ 
+ storage = localStorage.getItem('city')
+ if (storage) { 
+ storage += query + ','
+ console.log(storage)
+ } else{
+  storage = query + ','
+ }
+console.log(storage)
+  localStorage.setItem('city', storage)
 
-  searchApi(query);
+  
+searchApi(query);
 }
 
 searchFormEl.addEventListener("submit", handleSearchFormSubmit);
 
-// getParams();
+function getstorage(){
+  var storageArr = localStorage.getItem('city').split(',')
+  console.log(storageArr)
+  for (var i= 0; i < storageArr.length -1; i++) {
+    var cityBtn = document.createElement('button')
+  cityBtn.innerHTML = storageArr[i]
+  cityBtn.classList.add('col-10')
+  cityBtn.classList.add('offset-1')
+  cityList.append(cityBtn)
+  }
+}
+
+getstorage()
+
+console.log(document.getElementById('city-list').children[0].innerHTML)
+
+  document.getElementById('city-list').children[0].addEventListener('click', function(){
+ searchApi(document.getElementById('city-list').children[0].innerHTML)
+})
+document.getElementById('city-list').children[1].addEventListener('click', function(){
+  searchApi(document.getElementById('city-list').children[1].innerHTML)
+ })
+ document.getElementById('city-list').children[2].addEventListener('click', function(){
+  searchApi(document.getElementById('city-list').children[2].innerHTML)
+ })
+ document.getElementById('city-list').children[3].addEventListener('click', function(){
+  searchApi(document.getElementById('city-list').children[3].innerHTML)
+ })
+ document.getElementById('city-list').children[4].addEventListener('click', function(){
+  searchApi(document.getElementById('city-list').children[4].innerHTML)
+ })
+ document.getElementById('city-list').children[5].addEventListener('click', function(){
+  searchApi(document.getElementById('city-list').children[5].innerHTML)
+ })
+ document.getElementById('city-list').children[6].addEventListener('click', function(){
+  searchApi(document.getElementById('city-list').children[6].innerHTML)
+ })
+ document.getElementById('city-list').children[7].addEventListener('click', function(){
+  searchApi(document.getElementById('city-list').children[7].innerHTML)
+ })
+ document.getElementById('city-list').children[8].addEventListener('click', function(){
+  searchApi(document.getElementById('city-list').children[8].innerHTML)
+ })
+         
+   
+  
+
+
+
