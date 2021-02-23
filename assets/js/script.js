@@ -37,7 +37,7 @@ resultCard.append(resultBody);
   );
   iconEl.setAttribute("height", 20);
   iconEl.setAttribute("width", 20);
-  // resultContentEl.append(iconEl)
+ 
   console.log(iconEl);
 
   var bodyContentEl = document.createElement("p");
@@ -321,7 +321,8 @@ function handleSearchFormSubmit(event) {
   console.log(query);
   var cityButton = document.createElement('button')
   cityButton.innerHTML = query
-  cityButton.classList.add('col-8')
+  cityButton.classList.add('col-10')
+  cityButton.classList.add('offset-1')
   cityList.append(cityButton)
   cityButton.addEventListener('click', function(){
     searchApi(cityButton.innerHTML)
