@@ -28,15 +28,15 @@ resultCard.innerHTML = ''
 
 resultCard.append(resultBody);
 
-  var titleEl = document.getElementById("city");
-  titleEl = resultObj.name + " " + " ";
+  var titleEl = document.createElement("h1");
+  titleEl.innerHTML = resultObj.name + " " + " ";
   var iconEl = document.createElement("img");
   iconEl.setAttribute(
-    "scr",
+    "src",
     "http://openweathermap.org/img/wn/" + resultObj.weather[0].icon + ".png"
   );
-  iconEl.setAttribute("height", 20);
-  iconEl.setAttribute("width", 20);
+  iconEl.setAttribute("height", 40);
+  iconEl.setAttribute("width", 40);
  
   console.log(iconEl);
 
@@ -67,7 +67,7 @@ resultCard.append(resultBody);
 }
 
 function searchApi(query) {
-  var dailyQueryUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
+  var dailyQueryUrl = "http://api.openweathermap.org/data/2.5/weather?q=";
 
   dailyQueryUrl =
     dailyQueryUrl +
@@ -142,14 +142,14 @@ function searchApi(query) {
       console.log(forcastRes);
       var icon1 = document.createElement("img");
       icon1.setAttribute(
-        "scr",
+        "src",
         "http://openweathermap.org/img/wn/" +
           forcastRes.list[3].weather[0].icon +
           ".png"
       );
       console.log(icon1);
-      icon1.setAttribute("height", 20);
-      icon1.setAttribute("width", 20);
+      icon1.setAttribute("height", 40);
+      icon1.setAttribute("width", 40);
 
       var info1 = document.createElement("p");
       info1.innerHTML =
@@ -167,14 +167,14 @@ function searchApi(query) {
 
       var icon2 = document.createElement("img");
       icon2.setAttribute(
-        "scr",
+        "src",
         "http://openweathermap.org/img/w/" +
           forcastRes.list[11].weather[0].icon +
           ".png"
       );
 
-      icon2.setAttribute("height", 20);
-      icon2.setAttribute("width", 20);
+      icon2.setAttribute("height", 40);
+      icon2.setAttribute("width", 40);
 
       var info2 = document.createElement("p");
       info2.innerHTML =
@@ -192,14 +192,14 @@ function searchApi(query) {
 
       var icon3 = document.createElement("img");
       icon3.setAttribute(
-        "scr",
+        "src",
         "http://openweathermap.org/img/wn/" +
           forcastRes.list[19].weather[0].icon +
           ".png"
       );
 
-      icon3.setAttribute("height", 20);
-      icon3.setAttribute("width", 20);
+      icon3.setAttribute("height", 40);
+      icon3.setAttribute("width", 40);
 
       var info3 = document.createElement("p");
       info3.innerHTML =
@@ -217,14 +217,14 @@ function searchApi(query) {
 
       var icon4 = document.createElement("img");
       icon4.setAttribute(
-        "scr",
+        "src",
         "http://openweathermap.org/img/wn/" +
           forcastRes.list[27].weather[0].icon +
           ".png"
       );
 
-      icon4.setAttribute("height", 20);
-      icon4.setAttribute("width", 20);
+      icon4.setAttribute("height", 40);
+      icon4.setAttribute("width", 40);
 
       var info4 = document.createElement("p");
       info4.innerHTML =
@@ -242,14 +242,14 @@ function searchApi(query) {
 
       var icon5 = document.createElement("img");
       icon5.setAttribute(
-        "scr",
+        "src",
         "http://openweathermap.org/img/wn/" +
           forcastRes.list[35].weather[0].icon +
           ".png"
       );
 
-      icon5.setAttribute("height", 20);
-      icon5.setAttribute("width", 20);
+      icon5.setAttribute("height", 40);
+      icon5.setAttribute("width", 40);
 
       var info5 = document.createElement("p");
       info5.innerHTML =
