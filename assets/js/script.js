@@ -33,7 +33,7 @@ resultCard.append(resultBody);
   var iconEl = document.createElement("img");
   iconEl.setAttribute(
     "src",
-    "http://openweathermap.org/img/wn/" + resultObj.weather[0].icon + ".png"
+    "https://openweathermap.org/img/wn/" + resultObj.weather[0].icon + ".png"
   );
   iconEl.setAttribute("height", 40);
   iconEl.setAttribute("width", 40);
@@ -67,7 +67,7 @@ resultCard.append(resultBody);
 }
 
 function searchApi(query) {
-  var dailyQueryUrl = "http://api.openweathermap.org/data/2.5/weather?q=";
+  var dailyQueryUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
 
   dailyQueryUrl =
     dailyQueryUrl +
@@ -143,7 +143,7 @@ function searchApi(query) {
       var icon1 = document.createElement("img");
       icon1.setAttribute(
         "src",
-        "http://openweathermap.org/img/wn/" +
+        "https://openweathermap.org/img/wn/" +
           forcastRes.list[3].weather[0].icon +
           ".png"
       );
@@ -168,7 +168,7 @@ function searchApi(query) {
       var icon2 = document.createElement("img");
       icon2.setAttribute(
         "src",
-        "http://openweathermap.org/img/w/" +
+        "https://openweathermap.org/img/w/" +
           forcastRes.list[11].weather[0].icon +
           ".png"
       );
@@ -193,7 +193,7 @@ function searchApi(query) {
       var icon3 = document.createElement("img");
       icon3.setAttribute(
         "src",
-        "http://openweathermap.org/img/wn/" +
+        "https://openweathermap.org/img/wn/" +
           forcastRes.list[19].weather[0].icon +
           ".png"
       );
@@ -218,7 +218,7 @@ function searchApi(query) {
       var icon4 = document.createElement("img");
       icon4.setAttribute(
         "src",
-        "http://openweathermap.org/img/wn/" +
+        "https://openweathermap.org/img/wn/" +
           forcastRes.list[27].weather[0].icon +
           ".png"
       );
@@ -243,7 +243,7 @@ function searchApi(query) {
       var icon5 = document.createElement("img");
       icon5.setAttribute(
         "src",
-        "http://openweathermap.org/img/wn/" +
+        "https://openweathermap.org/img/wn/" +
           forcastRes.list[35].weather[0].icon +
           ".png"
       );
